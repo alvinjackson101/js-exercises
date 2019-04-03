@@ -2,3 +2,19 @@
 
     background-color: #f0db4f;
 }
+
+h1{
+
+    font-family: arial;
+
+}
+
+.content {
+
+    display: flex;
+    justify-content: left;
+    max-width: 70%;
+    margin: auto;
+    padding: 10px;
+    font-family: arial;
+}
