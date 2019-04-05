@@ -47,36 +47,31 @@
             <div class="container">
                     <h1>Find the last element.</h1>
            
-                    <p>84746553hdget46483e90yrf0900w7373bshob28o!O4703</p>
+                    <p>1, 2, 3, 4, 5, 6</p>
+        
+                    <p>
+                            <button type="button" class="btn btn-secondary btn-sm" onclick="myFunction()">Get Last Element</button>
+                            <div id="para-container"></div>
+                    </p>
         
                     <script>
-                        var loc = {'84746553hdget46483e90yrf0900w7373bshob28o!O4703': ['a','b','c'],
-       '84746553hdget46483e90yrf0900w7373bshob28o!O4703: ['d','e','f']};
-    
-    
-// add new last() method:
-if (!Array.prototype.last){
-    Array.prototype.last = function(){
-        return this[this.length - 1];
-    };
-};
-                    
-                    
-// test it
-alert(loc['f096012e-2497-485d-8adb-7ec0b9352c52'].last());
+                        function myFunction(){
+                        var array = [1,2,3,4,5,6];
+                        console.log(array.slice(-1)); // [6]
+                        document.getElementById("para-container").innerHTML = array.slice(-1)
+                        }
                     </script>
         
                     <div class="card">
                         <div class="card-body">
                            
-                                <pre type="text/javascript">
+                    <pre type="text/javascript">
 function myFunction(){
-    let container = document.getElementById("para-container")
-    var para = document.createElement("P");
-    para.innerText = "This is a paragraph.";
-    container.appendChild(para);
+var array = [1,2,3,4,5,6];
+console.log(array.slice(-1)); // [6]
+document.getElementById("para-container").innerHTML = array.slice(-1)
 }
-                                </pre>
+                     </pre>
                         </div>
                     </div>
                     
@@ -85,9 +80,3 @@ function myFunction(){
         
             </html>
         
-        </div>
-    </body>
-
-    </html>
-
-
