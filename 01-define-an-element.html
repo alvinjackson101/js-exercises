@@ -46,21 +46,29 @@
         <div class="container">
             <h1>Define an element.</h1>
    
-            <p>Define number, string, boolean, array, object literal, object, and function. Click button to create a P element with some text.</p>
+            <p>Define number, string, boolean, array, object literal, object, and function. Click button to see results.</p>
             
             <p>
-                    <button type="button" class="btn btn-secondary btn-sm" onclick="myFunction()">Create P Element</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="myFunction()">Define Elements</button>
                     <div id="para-container"></div>
+                    <div id="boolean-example"></div>
+                    <div id="x"></div>
             </p>
 
             <script>
                 function myFunction(){
                     let container = document.getElementById("para-container")
                     var para = document.createElement("P");
+                    document.getElementById ("boolean-example").innerHTML= 10>9; 
+                    var x=1; 
+                    document.getElementById("x").innerHTML= x=1;
                     para.innerText = "This is a paragraph.";
                     container.appendChild(para);
+                    boolean (10>9);
                 }
             </script>
+
+            <p>More elements are below code.</p>
 
             <div class="card">
                 <div class="card-body">
@@ -69,8 +77,12 @@
 function myFunction(){
     let container = document.getElementById("para-container")
     var para = document.createElement("P");
+    document.getElementById ("boolean-example").innerHTML= 10>9;
+    var x=1; 
+    document.getElementById("x").innerHTML= x=1;
     para.innerText = "This is a paragraph.";
     container.appendChild(para);
+    boolean (10>9);
 }
                         </pre>
                 </div>
