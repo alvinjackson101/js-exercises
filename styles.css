@@ -20,3 +20,9 @@ h1{
     padding: 10px;
     font-family: arial;
 }
+
+.picture{
+
+    height: 200px;
+    width: auto;
+}
