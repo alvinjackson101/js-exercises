@@ -2,7 +2,6 @@
     <head>
         <title>JS EXERCISES</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-       
         <link rel="stylesheet" type="text/css" href="styles.css"> 
         <link rel="shortcut icon" type="image/png" href="js-logo.png">
     </head>
@@ -43,9 +42,55 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <div class="content">
-            <h1>Convert money to coins.</h1>
-        </div>
-    </body>
+        <div class="container">
 
+            <h1>Convert to Coins</h1>
+            <p>Input dollar amount.</p>
+            <input type="number" id="money" placeholder="$ * . * *">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="convertMoney()">Convert to Coins</button>
+            <div id="answer"></div>
+    
+            <script>
+                function convertMoney(){
+                    let remander = 0
+                    let money = (document.getElementById('money').value * 100)
+                    let quarters = Math.floor(money / 25);
+                    remander = money % 25;
+                    let dimes = Math.floor(remander / 10);
+                    remander = remander % 10;
+                    let nickels = Math.floor(remander / 5)
+                    remander = Math.floor(remander % 5)
+                    
+                    let answer = `${quarters} Quarter(s)<br>${dimes} Dime(s)<br>${nickels} Nickle(s)<br>${remander} Penny(s)<br>`;
+                    document.getElementById('answer').innerHTML = answer
+                
+                }
+            
+            </script>
+
+            <div class="card">
+                <div class="card-body"> 
+                   
+            <pre type="text/javascript">
+function convertMoney(){
+    let remander = 0
+    let money = (document.getElementById('money').value * 100)
+    let quarters = Math.floor(money / 25);
+    remander = money % 25;
+    let dimes = Math.floor(remander / 10);
+    remander = remander % 10;
+    let nickels = Math.floor(remander / 5)
+    remander = Math.floor(remander % 5)
+    
+    let answer = `${quarters} Quarter(s)<br>${dimes} Dime(s)<br>${nickels} Nickle(s)<br>${remander} Penny(s)<br>`;
+    document.getElementById('answer').innerHTML = answer
+
+}
+             </pre>
+                </div>
+            </div> 
+        </div>
+    
+    </body>
+    
     </html>
